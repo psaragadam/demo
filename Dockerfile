@@ -19,8 +19,8 @@ MAINTAINER pavantoteach@gmail.com
 EXPOSE 8080
 
 #default command
-CMD java -jar /data/demo-0.1.0.jar
+CMD java -jar /target/demo-0.1.0.jar
 
 #copy demo to docker image from builder image
 
-COPY --from=maven_build /tmp/target/demo-0.0.1.jar /data/demo-0.0.1.jar
+COPY --from=maven_build /tmp/target/demo-0.0.1.jar /target/demo-0.0.1.jar
